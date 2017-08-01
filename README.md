@@ -1,4 +1,4 @@
-# cppstack [![Build Status](https://travis-ci.org/Flukas88/cppstack.svg?branch=master)](https://travis-ci.org/Flukas88/stack)
+# cppstack [![Build Status](https://travis-ci.org/Flukas88/cppstack.svg?branch=master)](https://travis-ci.org/Flukas88/cppstack)
 
 
 ## Abstract
