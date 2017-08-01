@@ -12,10 +12,6 @@
 
 using namespace std;
 
-#ifndef size
-#define size 25
-#endif
-
 class Stack {
 
 public:

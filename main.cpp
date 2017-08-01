@@ -32,7 +32,6 @@ int main(int arc, char **argv) {
             }
         }
     }
-    double res = thestack.pop();
-    std::cout << "Res = " << res << std::endl;
+    std::cout << "Res = " << thestack.pop() << std::endl;
     return 0;
 }
