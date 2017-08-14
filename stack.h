@@ -12,6 +12,8 @@
 
 using namespace std;
 
+
+
 class Stack {
 
 public:
@@ -49,5 +51,39 @@ bool Stack::is_number(const std::string &s) {
         ++it;
     return !s.empty() && it == s.end();
 }
+
+int parseExp(Stack exp_stack, vector<string> tokens) {
+    double op1, op2;
+    for (auto const &token : tokens) {
+        if (exp_stack.is_number(token)) {
+            exp_stack.push(std::stod(token));
+        } else {
+            if (token.find('+') != string::npos) {
+                op1 = exp_stack.pop();
+                op2 = exp_stack.pop();
+                exp_stack.push(op1 + op2);
+            } else if (token.find('-') != string::npos) {
+                op1 = exp_stack.pop();
+                op2 = exp_stack.pop();
+                exp_stack.push(op2 - op1);
+            } else if (token.find('x') != string::npos) {
+                op1 = exp_stack.pop();
+                op2 = exp_stack.pop();
+                exp_stack.push(op1 * op2);
+            } else if (token.find('/') != string::npos) {
+                op1 = exp_stack.pop();
+                op2 = exp_stack.pop();
+                if ((op1 == 0.0) || (op2 == 0.0)) {
+                    std::cout << "Division by 0 is not possible! \n";
+                } else {
+                    exp_stack.push((op2 / op1));
+                }
+            }
+        }
+    }
+    std::cout << "Res = " << exp_stack.pop() << std::endl;
+
+}
+
 
 #endif // CPPSTACK_STACK_H
