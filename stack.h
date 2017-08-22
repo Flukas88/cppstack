@@ -12,8 +12,6 @@
 
 using namespace std;
 
-
-
 class Stack {
 
 public:
@@ -36,6 +34,8 @@ private:
     vector<double> st;
 };
 
+int parseExp(Stack exp_stack, vector<string> tokens);
+
 void Stack::push(double item) { st.push_back(item); }
 
 double Stack::pop() {
@@ -51,6 +51,8 @@ bool Stack::is_number(const std::string &s) {
         ++it;
     return !s.empty() && it == s.end();
 }
+
+
 
 int parseExp(Stack exp_stack, vector<string> tokens) {
     double op1, op2;
@@ -74,7 +76,7 @@ int parseExp(Stack exp_stack, vector<string> tokens) {
                 op1 = exp_stack.pop();
                 op2 = exp_stack.pop();
                 if ((op1 == 0.0) || (op2 == 0.0)) {
-                    std::cout << "Division by 0 is not possible! \n";
+                    throw std::invalid_argument( "Division by 0 is not possible!" );
                 } else {
                     exp_stack.push((op2 / op1));
                 }
