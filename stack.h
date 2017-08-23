@@ -35,7 +35,7 @@ private:
     vector<double> st;
 };
 
-int parseExp(Stack exp_stack, vector<string> tokens);
+double parseExp(Stack exp_stack, vector<string> tokens);
 
 void Stack::push(double item) { st.push_back(item); }
 
@@ -55,7 +55,7 @@ bool Stack::is_number(const std::string &s) {
 
 
 
-int parseExp(Stack exp_stack, vector<string> tokens) {
+double parseExp(Stack exp_stack, vector<string> tokens) {
     double op1, op2;
     for (auto const &token : tokens) {
         if (exp_stack.is_number(token)) {
@@ -84,7 +84,7 @@ int parseExp(Stack exp_stack, vector<string> tokens) {
             }
         }
     }
-    std::cout << "Res = " << exp_stack.pop() << std::endl;
+    return exp_stack.pop();
 
 }
 
