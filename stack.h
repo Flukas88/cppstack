@@ -16,7 +16,7 @@ using namespace std;
 class Stack {
 
 public:
-    double pop();
+    double pop() ;
     void push(double item);
     bool is_number(const std::string &s);
     vector<string> split(const char *str, char c = ' ') {
