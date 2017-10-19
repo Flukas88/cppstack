@@ -1,7 +1,7 @@
 #include "stack.h"
 
 int main(int argc, char **argv) {
-    if (argc < 1) {
+    if (argc < 2) {
         cout << "You need to specify an exp to evaluate" << endl;
     } else {
         Stack the_stack;
