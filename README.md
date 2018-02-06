@@ -4,3 +4,8 @@
 ## Abstract
 
 A Reverse Polish notation calculator ( https://en.wikipedia.org/wiki/Reverse_Polish_notation ) in C++11
+
+
+### How to use it
+
+      ./cppstack "8 2 5 x + 1 3 2 x + 4 - /"
