@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
             cerr << "exception: " << e.what() << endl;
         }
     } else {
-        cout << "You need to specify an exp to evaluate" << endl;
+        cerr << "You need to specify an exp to evaluate" << endl;
     }
     return 0;
 }
