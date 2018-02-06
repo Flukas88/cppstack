@@ -1,6 +1,8 @@
 #include "stack.h"
 #include "utils.h"
 
+using namespace std;
+
 
 int main(int argc, char **argv) {
     if (checkArgs(argc, argv)) {

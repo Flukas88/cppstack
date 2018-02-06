@@ -11,9 +11,6 @@
 #include <string>
 #include <stdexcept>
 
-using namespace std;
-
-
 
 class Stack {
 
@@ -21,20 +18,20 @@ public:
     double pop() ;
     void push(double item);
     bool is_number(const std::string &s);
-    vector<string> split(const char *str, char c);
+    std::vector<std::string> split(const char *str, char c);
 private:
-    vector<double> st;
+    std::vector<double> st;
 };
 
-double parseExp(Stack exp_stack, vector<string> tokens);
+double parseExp(Stack exp_stack, std::vector<std::string> tokens);
 
-vector<string> Stack::split(const char *str, char c = ' ') {
-    vector<string> result;
+std::vector<std::string> Stack::split(const char *str, char c = ' ') {
+    std::vector<std::string> result;
     do {
         const char *begin = str;
         while (*str != c && *str)
             str++;
-        result.emplace_back(string(begin, str));
+        result.emplace_back(std::string(begin, str));
     } while (0 != *str++);
 
     return result;
@@ -57,25 +54,26 @@ bool Stack::is_number(const std::string &s) {
 }
 
 
-double parseExp(Stack exp_stack, vector<string> tokens) {
+
+double parseExp(Stack exp_stack, std::vector<std::string> tokens) {
     double op1, op2;
     for (auto const &token : tokens) {
         if (exp_stack.is_number(token)) {
             exp_stack.push(std::stod(token));
         } else {
-            if (token.find('+') != string::npos) {
+            if (token.find('+') != std::string::npos) {
                 op1 = exp_stack.pop();
                 op2 = exp_stack.pop();
                 exp_stack.push(op1 + op2);
-            } else if (token.find('-') != string::npos) {
+            } else if (token.find('-') != std::string::npos) {
                 op1 = exp_stack.pop();
                 op2 = exp_stack.pop();
                 exp_stack.push(op2 - op1);
-            } else if (token.find('x') != string::npos) {
+            } else if (token.find('x') != std::string::npos) {
                 op1 = exp_stack.pop();
                 op2 = exp_stack.pop();
                 exp_stack.push(op1 * op2);
-            } else if (token.find('/') != string::npos) {
+            } else if (token.find('/') != std::string::npos) {
                 op1 = exp_stack.pop();
                 op2 = exp_stack.pop();
                 if ((op1 == 0.0) || (op2 == 0.0)) {

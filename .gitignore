@@ -28,3 +28,4 @@ _config.yml
 out
 gen
 cmake-build-debug/
+.idea/codeStyles/
