@@ -1,9 +1,11 @@
 #include "stack.h"
+#include "catch.hpp"
+#include "utils.h"
+
+
 
 int main(int argc, char **argv) {
-    if (argc < 2) {
-        cout << "You need to specify an exp to evaluate" << endl;
-    } else {
+    if (checkArgs(argc, argv)) {
         Stack the_stack;
         vector<string> tokens = the_stack.split(argv[1], ' ');
         try {
@@ -11,6 +13,8 @@ int main(int argc, char **argv) {
         } catch (const std::invalid_argument &e) {
             cerr << "exception: " << e.what() << endl;
         }
+    } else {
+        cout << "You need to specify an exp to evaluate" << endl;
     }
     return 0;
 }
