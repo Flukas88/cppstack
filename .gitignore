@@ -20,7 +20,12 @@
 *.app
 ### Example user template
 # IntelliJ project files
-.idea/*
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
 *.iml
 out
 gen
