@@ -1,5 +1,4 @@
 #include "stack.h"
-#include "catch.hpp"
 #include "utils.h"
 
 
