@@ -30,3 +30,4 @@
 out
 gen
 cmake-build-debug/
+_config.yml
