@@ -11,10 +11,7 @@
 #include <string>
 #include <stdexcept>
 
-
 using namespace std;
-
-
 
 
 
@@ -24,23 +21,24 @@ public:
     double pop() ;
     void push(double item);
     bool is_number(const std::string &s);
-    vector<string> split(const char *str, char c = ' ') {
-        vector<string> result;
-        do {
-            const char *begin = str;
-            while (*str != c && *str)
-                str++;
-            result.emplace_back(string(begin, str));
-        } while (0 != *str++);
-
-        return result;
-    };
-
+    vector<string> split(const char *str, char c);
 private:
     vector<double> st;
 };
 
 double parseExp(Stack exp_stack, vector<string> tokens);
+
+vector<string> Stack::split(const char *str, char c = ' ') {
+    vector<string> result;
+    do {
+        const char *begin = str;
+        while (*str != c && *str)
+            str++;
+        result.emplace_back(string(begin, str));
+    } while (0 != *str++);
+
+    return result;
+};
 
 void Stack::push(double item) { st.push_back(item); }
 
@@ -57,7 +55,6 @@ bool Stack::is_number(const std::string &s) {
         ++it;
     return !s.empty() && it == s.end();
 }
-
 
 
 double parseExp(Stack exp_stack, vector<string> tokens) {
@@ -90,7 +87,6 @@ double parseExp(Stack exp_stack, vector<string> tokens) {
         }
     }
     return exp_stack.pop();
-
 }
 
 
