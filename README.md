@@ -3,7 +3,7 @@
 
 ## Abstract
 
-A Reverse Polish notation calculator ( https://en.wikipedia.org/wiki/Reverse_Polish_notation ) in C++11
+A Reverse Polish notation calculator in C++11
 
 
 ### How to use it
