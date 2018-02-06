@@ -21,11 +21,7 @@ _config.yml
 *.app
 # User-specific stuff:
 # User-specific stuff:
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/dictionaries
-*.iml
+.idea/
 out
 gen
 cmake-build-debug/
-.idea/codeStyles/
