@@ -24,3 +24,4 @@ _config.yml
 out
 gen
 cmake-build-debug/
+cmake-build-release/
