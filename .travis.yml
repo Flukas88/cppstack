@@ -15,8 +15,9 @@ script:
   - ./cppstack "5 5 /"
   - ./cppstack "5 1 2 + 4 x + 3 - 2 /"
   - ./cppstack "8 2 5 x + 1 3 2 x + 4 - /"
-  - gcov utils.h
-  - gcov stack.h
+  - gcov include/utils.h
+  - gcov include/stack.h
+  - gcov src/main.cpp 
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
