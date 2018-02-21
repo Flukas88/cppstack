@@ -7,18 +7,14 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get install -y cmake python rcs
+  - sudo apt-get install -y cmake python
   - sudo pip install --upgrade pip
   - sudo pip install codecov
 
 script:
   - cmake CMakeLists.txt && make
-  - ./cppstack
-  - ./cppstack "5 5 /"
-  - ./cppstack "5 1 2 + 4 x + 3 - 2 /"
-  - ./cppstack "8 2 5 x + 1 3 2 x + 4 - /"
   - find . -name "*.cpp" -exec sh -c 'gcov {} -o "$(dirname {})"' \;
-  - co cppstack unittest
+  - cp cppstack unittest
   - coverage run unittest/UnitTest.py
  
 after_success:
