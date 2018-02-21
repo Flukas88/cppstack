@@ -7,7 +7,7 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get install -y cmake python
+  - sudo apt-get install -y cmake python rcs
   - sudo pip install --upgrade pip
   - sudo pip install codecov
 
