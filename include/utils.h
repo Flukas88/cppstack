@@ -7,6 +7,5 @@
 
 bool checkArgs(int argc, char **argv);
 
-bool checkArgs(int argc, char **argv) { return argc < 2 ? false : true; }
 
 #endif // CPPSTACK_UTILS_H

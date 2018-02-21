@@ -1,7 +1,7 @@
 # cppstack [![Build Status](https://travis-ci.org/Flukas88/cppstack.svg?branch=master)](https://travis-ci.org/Flukas88/cppstack) [![codecov](https://codecov.io/gh/Flukas88/cppstack/branch/master/graph/badge.svg)](https://codecov.io/gh/Flukas88/cppstack)
 
 
-## Abstract
+### Abstract
 
 A Reverse Polish notation calculator in *modern C++11*
 
