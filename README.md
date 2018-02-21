@@ -3,9 +3,15 @@
 
 ## Abstract
 
-A Reverse Polish notation calculator in C++11
+A Reverse Polish notation calculator in *modern C++11*
 
 
 ### How to use it
 
       ./cppstack "8 2 5 x + 1 3 2 x + 4 - /"
+
+### Unittest
+
+To manually run unittests 
+
+    python unittest/UnitTest.py
