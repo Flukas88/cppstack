@@ -17,25 +17,24 @@ public:
   double pop();
   void push(double item);
   bool is_number(const std::string &s);
-  std::vector<std::string> split(const char *str, char c);
+  std::vector<std::string> split(const std::string &text, char sep);
 
 private:
   std::vector<double> st;
 };
 
-double parseExp(Stack exp_stack, std::vector<std::string> tokens);
+std::string parseExp(Stack exp_stack, std::vector<std::string> tokens);
 
-std::vector<std::string> Stack::split(const char *str, char c = ' ') {
-  std::vector<std::string> result;
-  do {
-    const char *begin = str;
-    while (*str != c && *str)
-      str++;
-    result.emplace_back(std::string(begin, str));
-  } while (0 != *str++);
-
-  return result;
-};
+std::vector<std::string> Stack::split(const std::string &text, char sep = ' ') {
+  std::vector<std::string> tokens;
+  std::size_t start = 0, end = 0;
+  while ((end = text.find(sep, start)) != std::string::npos) {
+    tokens.push_back(text.substr(start, end - start));
+    start = end + 1;
+  }
+  tokens.push_back(text.substr(start));
+  return tokens;
+}
 
 void Stack::push(double item) { st.push_back(item); }
 
@@ -53,7 +52,7 @@ bool Stack::is_number(const std::string &s) {
   return !s.empty() && it == s.end();
 }
 
-double parseExp(Stack exp_stack, std::vector<std::string> tokens) {
+std::string parseExp(Stack exp_stack, std::vector<std::string> tokens) {
   double op1, op2;
   for (auto const &token : tokens) {
     if (exp_stack.is_number(token)) {
@@ -82,7 +81,7 @@ double parseExp(Stack exp_stack, std::vector<std::string> tokens) {
       }
     }
   }
-  return exp_stack.pop();
+  return std::to_string(exp_stack.pop());
 }
 
 #endif // CPPSTACK_STACK_H
