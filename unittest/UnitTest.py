@@ -9,10 +9,10 @@ class CppCalcTest(unittest.TestCase):
         pass
 
     def test_valid_calc(self):
-        self.assertIn("6", subprocess.Popen('../cppsack  "5 1 2 + 4 x + 3 - 2 /"', stdout=PIPE).stdout.read())
+        self.assertIn("6", subprocess.Popen('../cppstack  "5 1 2 + 4 x + 3 - 2 /"', stdout=PIPE).stdout.read())
 
     def test_invalid_calc(self):
-        self.assertIn("possible", subprocess.Popen('../cppsack  "5 5 /"', stdout=PIPE).stdout.read())
+        self.assertIn("possible", subprocess.Popen('../cppstack  "5 5 /"', stdout=PIPE).stdout.read())
 
 if __name__ == '__main__':
     unittest.main()
