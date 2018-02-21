@@ -5,7 +5,6 @@
 #ifndef CPPSTACK_STACK_H
 #define CPPSTACK_STACK_H
 
-#include <cstring>
 #include <iostream>
 #include <stdexcept>
 #include <string>

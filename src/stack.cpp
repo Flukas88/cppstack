@@ -4,7 +4,6 @@
 
 #include "../include/stack.h"
 
-std::string parseExp(Stack exp_stack, std::vector<std::string> tokens);
 
 std::vector<std::string> Stack::split(const std::string &text, char sep = ' ') {
     std::vector<std::string> tokens;
