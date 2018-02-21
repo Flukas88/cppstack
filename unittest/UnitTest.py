@@ -10,11 +10,11 @@ class CppCalcTest(unittest.TestCase):
 
     def test_valid_calc(self): 
         
-        self.assertIn("6",subprocess.Popen(["./cppstack", "5 1 2 + 4 x + 3 - 2 /"], 
+        self.assertIn("7.000000",subprocess.Popen(["./cppstack", "5 1 2 + 4 x + 3 - 2 /"], 
                           stdout=subprocess.PIPE).communicate()[0])
 
     def test_invalid_calc(self):
-        self.assertIn("possible", subprocess.Popen(["./cppstack", "5 5 /"], 
+        self.assertIn("possible", subprocess.Popen(["./cppstack", "5 0 /"], 
                           stdout=subprocess.PIPE).communicate()[0])
 
 if __name__ == '__main__':
