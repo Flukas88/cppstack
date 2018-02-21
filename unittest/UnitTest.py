@@ -8,13 +8,11 @@ class CppCalcTest(unittest.TestCase):
     def setUp(self):
         pass
 
-    def test_valid_calc(self): 
-        
+    def test_valid_calc(self):
         self.assertIn("7.000000",subprocess.Popen(["./cppstack", "5 1 2 + 4 x + 3 - 2 /"], 
                           stdout=subprocess.PIPE).communicate()[0])
 
     def test_invalid_calc(self):
-        
         try:
             subprocess.Popen(["./cppstack", "5 0 /"], 
                           stdout=subprocess.PIPE).communicate()[0]
