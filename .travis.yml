@@ -18,7 +18,7 @@ script:
   - ./cppstack "5 1 2 + 4 x + 3 - 2 /"
   - ./cppstack "8 2 5 x + 1 3 2 x + 4 - /"
   - find . -name "*.cpp" -exec sh -c 'gcov {} -o "$(dirname {})"' \;
-  - coverage run unittest/Unittest.py
+  - coverage run unittest/UnitTest.py
   -
 after_success:
   - bash <(curl -s https://codecov.io/bash)
