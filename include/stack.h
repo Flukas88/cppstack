@@ -18,5 +18,4 @@ private:
   std::vector<double> st;
 };
 
-
 #endif // CPPSTACK_STACK_H

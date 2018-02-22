@@ -1,11 +1,10 @@
 #ifndef CPPSTACK_UTILS_H
 #define CPPSTACK_UTILS_H
 
+#include "stack.h"
 #include <string>
-#include "../include/stack.h"
 
-bool checkArgs(int argc, char **argv)  noexcept;
+bool checkArgs(int argc, char **argv) noexcept;
 std::string parseExp(Stack exp_stack, std::vector<std::string> tokens);
-
 
 #endif // CPPSTACK_UTILS_H
