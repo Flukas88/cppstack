@@ -6,7 +6,7 @@ set(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 
 
-set(SOURCE_FILES src/main.cpp src/utils.cpp src/stack.cpp)
+set(SOURCE_FILES main.cpp src/utils.cpp src/stack.cpp)
 add_executable(cppstack ${SOURCE_FILES})
 
 target_include_directories(cppstack
