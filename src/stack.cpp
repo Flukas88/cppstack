@@ -1,4 +1,4 @@
-#include "../include/stack.h"
+#include "stack.h"
 
 
 std::vector<std::string> Stack::split(const std::string &text, char sep = ' ') {
