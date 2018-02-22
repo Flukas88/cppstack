@@ -1,7 +1,3 @@
-//
-// Created by lfrances on 26-Jul-17.
-//
-
 #ifndef CPPSTACK_STACK_H
 #define CPPSTACK_STACK_H
 

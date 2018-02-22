@@ -1,14 +1,9 @@
-//
-// Created by lfrances on 21-Feb-18.
-//
-
 #include "../include/utils.h"
-#include "../include/stack.h"
 
 bool checkArgs(int argc, char **argv) { return argc < 2 ? false : true; }
 
 std::string parseExp(Stack exp_stack, std::vector<std::string> tokens) {
-    double op1, op2;
+    double op1, op2 = 0.0;
     for (auto const &token : tokens) {
         if (exp_stack.is_number(token)) {
             exp_stack.push(std::stod(token));

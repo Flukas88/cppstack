@@ -1,7 +1,3 @@
-//
-// Created by lfrances on 21-Feb-18.
-//
-
 #include "../include/stack.h"
 
 
