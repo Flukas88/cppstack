@@ -1,6 +1,6 @@
 #include "../include/utils.h"
 
-bool checkArgs(int argc, char **argv) { return argc < 2 ? false : true; }
+bool checkArgs(int argc, char **argv)  noexcept { return argc < 2 ? false : true; }
 
 std::string parseExp(Stack exp_stack, std::vector<std::string> tokens) {
     double op1, op2 = 0.0;

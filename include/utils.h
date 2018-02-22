@@ -4,7 +4,7 @@
 #include <string>
 #include "../include/stack.h"
 
-bool checkArgs(int argc, char **argv);
+bool checkArgs(int argc, char **argv)  noexcept;
 std::string parseExp(Stack exp_stack, std::vector<std::string> tokens);
 
 
