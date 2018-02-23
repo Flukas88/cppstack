@@ -1,5 +1,5 @@
-#ifndef CPPSTACK_STACK_H
-#define CPPSTACK_STACK_H
+#ifndef CPPSTACK_STACK_HPP
+#define CPPSTACK_STACK_HPP
 
 #include <iostream>
 #include <stdexcept>
@@ -18,4 +18,4 @@ private:
   std::vector<double> st;
 };
 
-#endif // CPPSTACK_STACK_H
+#endif // CPPSTACK_STACK_HPP

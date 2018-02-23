@@ -1,7 +1,7 @@
-#include "utils.h"
+#include "utils.hpp"
 
 bool checkArgs(const int &argc) noexcept {
-  return argc < 2 ? false : true;
+  return argc >= 2;
 }
 
 const std::string parseExp(Stack exp_stack, std::vector<std::string> tokens) {

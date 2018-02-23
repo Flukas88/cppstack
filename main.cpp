@@ -1,5 +1,5 @@
-#include "stack.h"
-#include "utils.h"
+#include "stack.hpp"
+#include "utils.hpp"
 
 int main(int argc, char **argv) {
     if (checkArgs(argc)) {

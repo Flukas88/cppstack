@@ -7,7 +7,7 @@ set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 
 
 set(SOURCE_FILES main.cpp src/utils.cpp src/stack.cpp)
-set(HEADERS_FILES include/stack.h include/utils.h)
+set(HEADERS_FILES include/stack.hpp include/utils.hpp)
 
 add_executable(cppstack ${SOURCE_FILES})
 
