@@ -5,6 +5,6 @@
 #include <string>
 
 bool checkArgs(const int &argc) noexcept;
-std::string parseExp(Stack exp_stack, std::vector<std::string> tokens);
+const std::string parseExp(Stack exp_stack, std::vector<std::string> tokens);
 
 #endif // CPPSTACK_UTILS_H

@@ -4,7 +4,7 @@ bool checkArgs(const int &argc) noexcept {
   return argc < 2 ? false : true;
 }
 
-std::string parseExp(Stack exp_stack, std::vector<std::string> tokens) {
+const std::string parseExp(Stack exp_stack, std::vector<std::string> tokens) {
   double op1, op2 = 0.0;
   for (auto const &token : tokens) {
     if (exp_stack.is_number(token)) {
