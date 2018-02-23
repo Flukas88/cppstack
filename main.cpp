@@ -2,7 +2,7 @@
 #include "utils.h"
 
 int main(int argc, char **argv) {
-  if (checkArgs(argc, argv)) {
+  if (checkArgs(argc)) {
     Stack the_stack;
     std::vector<std::string> tokens = the_stack.split(argv[1], ' ');
     try {

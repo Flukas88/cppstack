@@ -1,6 +1,6 @@
 #include "utils.h"
 
-bool checkArgs(int argc, char **argv) noexcept {
+bool checkArgs(int argc) noexcept {
   return argc < 2 ? false : true;
 }
 
