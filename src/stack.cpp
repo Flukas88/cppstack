@@ -14,7 +14,7 @@ std::vector<std::string> Stack::split(const std::string &text, char sep = ' ') {
 
 void Stack::push(double item) { st.push_back(item); }
 
-double Stack::pop() {
+const double Stack::pop() {
     double item;
     item = st.back();
     st.pop_back();
