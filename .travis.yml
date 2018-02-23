@@ -19,9 +19,6 @@ matrix:
   - os: osx
   - env: CLANG=6.0 SAN_FLAGS="--enable-asan --enable-ubsan"
 
-before_install:
-  - sudo apt-get update -qq
-
 install:
   - sudo pip install --upgrade pip
   - sudo pip install codecov
