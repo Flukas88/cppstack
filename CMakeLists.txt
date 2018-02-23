@@ -20,3 +20,8 @@ target_include_directories(cppstack
         )
 
 
+option(USE_CLANG "build application with clang" OFF) # OFF is the default
+
+if(USE_CLANG)
+    set(CMAKE_CXX_FLAGS "-fprofile-instr-generate -fcoverage-mapping")
+endif(USE_CLANG)
