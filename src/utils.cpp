@@ -1,8 +1,6 @@
 #include "utils.hpp"
 
-bool checkArgs(const int &argc) noexcept {
-  return argc >= 2;
-}
+bool checkArgs(const int &argc) noexcept { return argc >= 2; }
 
 const std::string parseExp(Stack exp_stack, std::vector<std::string> tokens) {
   double op1, op2 = 0.0;
