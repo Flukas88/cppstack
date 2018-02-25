@@ -12,7 +12,8 @@ int main(int argc, char **argv) {
       std::cerr << "exception: " << e.what() << std::endl;
     }
   } else {
-    std::cerr << "You need to specify an exp to evaluate such as "5 10 x 2/" << std::endl;
+    std::cerr << "You need to specify an exp to evaluate such as " 5 10 x 2 /
+                     " << std::endl;
   }
   return 0;
 }
