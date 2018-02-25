@@ -20,7 +20,7 @@ install:
 
 script:
   - cmake CMakeLists.txt && make
-  - sudo chmod 777 cpppstack
+  - sudo chmod 777 cppstack
   - coverage run unittest/UnitTest.py
  
 after_success:
