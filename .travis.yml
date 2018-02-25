@@ -20,7 +20,6 @@ install:
 
 script:
   - cmake CMakeLists.txt && make
-  - cp cppstack unittest
   - coverage run unittest/UnitTest.py
  
 after_success:
