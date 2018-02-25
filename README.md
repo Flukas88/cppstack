@@ -29,4 +29,4 @@ Not tested with travis
 Tests are run on commit via travis.  
 To manually run them 
 
-    python unittest/UnitTest.py
+    python UnitTest.py

@@ -20,8 +20,7 @@ install:
 
 script:
   - cmake CMakeLists.txt && make
-  - sudo chmod 777 cppstack
-  - coverage run unittest/UnitTest.py
+  - coverage run UnitTest.py
  
 after_success:
   - bash <(curl -s https://codecov.io/bash)
