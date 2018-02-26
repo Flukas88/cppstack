@@ -22,8 +22,8 @@ Tested with travis
   - *gcc* [GNU/Linux]
   
 Not tested with travis
-  - *Visual Studio* 
-  - *gcc* (MinGW) via CLion
+  - *Visual Studio Community 2017* 
+  - *gcc* (MinGW GCC 6.4.0) via CLion
 
 ### Unittest
 
