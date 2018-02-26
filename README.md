@@ -22,11 +22,12 @@ Tested with travis
   - *gcc* [GNU/Linux]
   
 Not tested with travis
-  - Visual Studio 
+  - *Visual Studio* 
+  - *gcc* (MinGW) via CLion
 
 ### Unittest
 
 Tests are run on commit via travis.  
-To manually run them 
+To manually run them (after build)
 
     python UnitTest.py
