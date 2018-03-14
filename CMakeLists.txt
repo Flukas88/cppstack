@@ -5,8 +5,9 @@ project(cppstack  VERSION 0.2.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 
-# source file config
-file(GLOB SOURCE_FILES  main.cpp src/*.cpp)
+# source files config
+file(GLOB SOURCE_FILES  ${CMAKE_SOURCE_DIR}/src/*.cpp)
+set(MAIN_FILE ${CMAKE_SOURCE_DIR}/main.cpp)
 
 # flags config
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
@@ -18,7 +19,7 @@ elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
 endif()
 
 # include config
-include_directories(include src)
+include_directories(include)
 
 # exec config
-add_executable(cppstack ${SOURCE_FILES})
+add_executable(cppstack ${MAIN_FILE} ${SOURCE_FILES} )
