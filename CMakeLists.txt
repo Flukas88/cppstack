@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 
 # source file config
-set(SOURCE_FILES main.cpp src/utils.cpp src/stack.cpp)
+set(SOURCE_FILES main.cpp src/*.cpp)
 
 # flags config
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
