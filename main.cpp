@@ -1,7 +1,7 @@
 //===-- main.cpp - Entry point ---------------*- C++ -*-===//
 ///
 /// \file
-/// This file contains the main() methos
+/// This file contains the main() function
 ///
 //===---------------------------------------------------===//
 
