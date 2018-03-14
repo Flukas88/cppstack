@@ -1,3 +1,9 @@
+//===-- src/stack.cpp - Stack class implementation ---------------*- C++ -*-===//
+///
+/// \file
+/// This file contains the implementation for the Stack class
+///
+//===----------------------------------------------------------------------===//
 #include "stack.hpp"
 
 std::vector<std::string> Stack::split(const std::string &text, char sep = ' ') {

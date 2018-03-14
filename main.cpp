@@ -1,3 +1,10 @@
+//===-- main.cpp - Entry point ---------------*- C++ -*-===//
+///
+/// \file
+/// This file contains the main() methos
+///
+//===---------------------------------------------------===//
+
 #include "stack.hpp"
 #include "utils.hpp"
 

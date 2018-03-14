@@ -1,3 +1,10 @@
+//===-- include/utils.hpp - Utils functions definition -----------*- C++ -*-===//
+///
+/// \file
+/// This file contains the definitions for the utils functions
+///
+//===----------------------------------------------------------------------===//
+
 #ifndef CPPSTACK_UTILS_HPP
 #define CPPSTACK_UTILS_HPP
 

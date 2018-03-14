@@ -1,3 +1,9 @@
+//===-- src/utils.cpp - Utils functions implementation ---------------*- C++ -*-===//
+///
+/// \file
+/// This file contains the implementation for the utils functions
+///
+//===--------------------------------------------------------------------------===//
 #include "utils.hpp"
 
 bool checkArgs(const int &argc) noexcept { return argc >= 2; }
