@@ -10,3 +10,7 @@ cmake-build-release/
 .DS_Store
 .vscode/
 .idea/
+CMakeCache.txt      
+CMakeFiles          
+Makefile            
+cmake_install.cmake 
