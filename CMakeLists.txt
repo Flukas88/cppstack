@@ -1,9 +1,15 @@
 cmake_minimum_required(VERSION 3.2)
 project(cppstack  VERSION 0.2.1 LANGUAGES CXX)
 
-# language config
+### Standard
 set(CMAKE_CXX_STANDARD 11)
+set( CMAKE_CXX_STANDARD_REQUIRED ON )
+set( CMAKE_CXX_EXTENSIONS OFF )
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
+
+### Verbosity
+set( CMAKE_COLOR_MAKEFILE ON )
+set( CMAKE_VERBOSE_MAKEFILE ON )
 
 # source files config
 file(GLOB SOURCE_FILES  ${CMAKE_SOURCE_DIR}/src/*.cpp)
