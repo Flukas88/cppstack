@@ -11,6 +11,6 @@ cmake-build-release/
 .vscode/
 .idea/
 CMakeCache.txt      
-CMakeFiles          
+CMakeFiles/
 Makefile            
 cmake_install.cmake 

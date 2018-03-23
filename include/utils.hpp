@@ -1,4 +1,5 @@
-//===-- include/utils.hpp - Utils functions definition -----------*- C++ -*-===//
+//===-- include/utils.hpp - Utils functions definition -----------*- C++
+//-*-===//
 ///
 /// \file
 /// This file contains the definitions for the utils functions

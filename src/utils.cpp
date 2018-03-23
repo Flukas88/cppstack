@@ -1,4 +1,5 @@
-//===-- src/utils.cpp - Utils functions implementation ---------------*- C++ -*-===//
+//===-- src/utils.cpp - Utils functions implementation ---------------*- C++
+//-*-===//
 ///
 /// \file
 /// This file contains the implementation for the utils functions

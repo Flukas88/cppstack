@@ -1,4 +1,5 @@
-//===-- include/stack.hpp - Stack class definition ---------------*- C++ -*-===//
+//===-- include/stack.hpp - Stack class definition ---------------*- C++
+//-*-===//
 ///
 /// \file
 /// This file contains the definitions for the Stack class

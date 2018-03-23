@@ -1,4 +1,5 @@
-//===-- src/stack.cpp - Stack class implementation ---------------*- C++ -*-===//
+//===-- src/stack.cpp - Stack class implementation ---------------*- C++
+//-*-===//
 ///
 /// \file
 /// This file contains the implementation for the Stack class
