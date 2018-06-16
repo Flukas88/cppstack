@@ -10,6 +10,7 @@ Build:
   script:
   - cmake CMakeLists.txt
   - make
+  - ls 
   
 Test:
   stage: UnitTest
