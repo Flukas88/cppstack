@@ -5,15 +5,8 @@ stages:
 Build:
   stage: Build and Test
   tags:
-    - cpp
+    - cpp,python
   script:
   - cmake CMakeLists.txt
   - make
-  - python UnitTest.py
-
-Unittest:
-  stage: Build and Test
-  tags:
-    - python
-  script:
   - python UnitTest.py
