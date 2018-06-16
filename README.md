@@ -1,8 +1,5 @@
 # cppstack
- [![Build Status](https://travis-ci.org/Flukas88/cppstack.svg?branch=master)](https://travis-ci.org/Flukas88/cppstack)
- 
- [![codecov](https://codecov.io/gh/Flukas88/cppstack/branch/master/graph/badge.svg)](https://codecov.io/gh/Flukas88/cppstack)
-
+[![pipeline status](https://git.lucafrancesca.me/luca.francesca/cppstack/badges/master/pipeline.svg)](https://git.lucafrancesca.me/luca.francesca/cppstack/commits/master)
 
 
 ### What is it about
