@@ -1,0 +1,24 @@
+stages:
+  - Build
+  - UnitTest
+
+
+Build:
+  stage: Build
+  tags:
+    - cpp
+  script:
+  - cmake CMakeLists.txt
+  - make
+  
+Test:
+  stage: UnitTest
+  tags:
+    - python
+  script:
+  - virtualenv venv
+  - source venv/bin/activate
+  - pip install -r requirements.txt
+  - python UnitTest.py
+  - python tests/Unittest.py
+  - deactivate
