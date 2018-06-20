@@ -1,6 +1,13 @@
 stages:
+  - CppCheck
   - Build and Test
 
+CppCheck:
+  stage: CppCheck
+  tags:
+    - cpp
+  script:
+  - cppcheck -I include/ -I src/ main.cpp
 
 Build:
   stage: Build and Test
