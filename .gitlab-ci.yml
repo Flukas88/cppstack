@@ -7,7 +7,7 @@ CppCheck:
   tags:
     - cpp
   script:
-  - cppcheck . --enable=all --check-config -I include/
+  - cppcheck . --enable=all --suppress=missingIncludeSystem --check-config -I include/
 
 Build:
   stage: Build and Test
