@@ -1,7 +1,15 @@
 stages:
   - CppCheck
+  - ClangFormat
   - Build and Test
 
+ClangFormat:
+  stage: ClangFormat
+  tags:
+    - cpp
+  script:
+  - find . -iname *.h -o -iname *.cpp | xargs clang-format -i -style=file 
+  
 CppCheck:
   stage: CppCheck
   tags:
