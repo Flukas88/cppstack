@@ -1,5 +1,5 @@
 # cppstack
-[![pipeline status](https://github.com/Flukas88/cppstack/cppstack/badges/master/pipeline.svg)](https://https://github.com/Flukas88/cppstack/cppstack/commits/master)
+[![Build Status](https://travis-ci.org/Flukas88/cppstack.svg?branch=master)](https://travis-ci.org/Flukas88/cppstack)
 
 
 ### What is it about
