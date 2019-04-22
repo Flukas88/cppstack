@@ -1,10 +1,3 @@
-//===-- main.cpp - Entry point ---------------*- C++ -*-===//
-///
-/// \file
-/// This file contains the main() function
-///
-//===---------------------------------------------------===//
-
 #include "stack.hpp"
 #include "utils.hpp"
 

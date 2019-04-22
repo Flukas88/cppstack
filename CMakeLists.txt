@@ -15,15 +15,6 @@ set( CMAKE_VERBOSE_MAKEFILE ON )
 file(GLOB SOURCE_FILES  ${CMAKE_SOURCE_DIR}/src/*.cpp)
 set(MAIN_FILE ${CMAKE_SOURCE_DIR}/main.cpp)
 
-# flags config
-if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-    # using Clang
-    set(CMAKE_CXX_FLAGS "-fprofile-instr-generate -fcoverage-mapping")
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-    # using GCC
-    set(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
-endif()
-
 # include config
 include_directories(include)
 
