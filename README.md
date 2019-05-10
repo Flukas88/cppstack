@@ -20,7 +20,9 @@ Tested with travis
   
 Not tested with travis
   - *Visual Studio Community 2017* 
+  - *Visual Studio Community 2019* 
   - *gcc* (MinGW GCC 6.4.0) via CLion
+  - *gcc* on MacOS (gcc 9.x)
 
 ### Unittest
 
