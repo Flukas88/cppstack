@@ -3,6 +3,7 @@ _config.yml
 *.lib
 *.exe
 *.out
+*.pyc
 *.app
 # User-specific stuff:
 cmake-build-debug/
