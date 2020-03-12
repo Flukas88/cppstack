@@ -12,7 +12,7 @@ set( CMAKE_COLOR_MAKEFILE ON )
 set( CMAKE_VERBOSE_MAKEFILE OFF )
 
 #
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE RelWithDebInfo)
 
 # source files config
 file(GLOB SOURCE_FILES  ${CMAKE_SOURCE_DIR}/src/*.cpp)
