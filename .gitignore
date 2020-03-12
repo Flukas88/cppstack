@@ -18,3 +18,4 @@ cmake_install.cmake
 .vs/
 .ccls-cache/
 build/
+ccpstack
