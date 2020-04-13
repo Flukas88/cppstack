@@ -14,12 +14,17 @@ set( CMAKE_VERBOSE_MAKEFILE OFF )
 #
 set(CMAKE_BUILD_TYPE RelWithDebInfo)
 
-# source files config
-file(GLOB SOURCE_FILES  ${CMAKE_SOURCE_DIR}/src/*.cpp)
-set(MAIN_FILE ${CMAKE_SOURCE_DIR}/main.cpp)
+add_library(stacklib
+  src/stack.cpp
+  src/utils.cpp
+  include/stack.hpp
+  include/utils.hpp
+)
 
 # include config
 include_directories(include)
 
 # exec config
-add_executable(cppstack ${MAIN_FILE} ${SOURCE_FILES} )
+add_executable(cppstack main.cpp )
+target_link_libraries(cppstack PRIVATE stacklib)
+
