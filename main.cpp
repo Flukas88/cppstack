@@ -4,7 +4,7 @@
 int main(int argc, char **argv) {
   if (checkArgs(argc)) {
     Stack the_stack;
-    std::vector<std::string> tokens = the_stack.split(argv[1], ' ');
+    std::vector<std::string> tokens = Stack::split(argv[1], ' ');
     try {
       std::cout << "Res of " << argv[1] << " is " << parseExp(the_stack, tokens)
                 << "\n";

@@ -20,11 +20,11 @@ std::vector<std::string> Stack::split(const std::string &text, char sep = ' ') {
 
 void Stack::push(double item) { st.push_back(item); }
 
-const double Stack::pop() {
+double Stack::pop() {
   double item;
   item = st.back();
   st.pop_back();
-  return (item);
+  return item;
 }
 
 bool Stack::is_number(const std::string &s) {

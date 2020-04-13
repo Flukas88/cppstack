@@ -18,10 +18,10 @@
 class Stack {
 
 public:
-  const double pop();
+  double pop();
   void push(double item);
-  bool is_number(const std::string &s);
-  std::vector<std::string> split(const std::string &text, char sep);
+  static bool is_number(const std::string &s);
+  static std::vector<std::string> split(const std::string &text, char sep);
 
 private:
   std::vector<double> st;

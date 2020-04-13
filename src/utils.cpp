@@ -9,10 +9,10 @@
 
 bool checkArgs(const int &argc) noexcept { return argc >= 2; }
 
-const std::string parseExp(Stack exp_stack, std::vector<std::string> tokens) {
+std::string parseExp(Stack exp_stack, const std::vector<std::string>& tokens) {
   double op1, op2 = double();
   for (auto const &token : tokens) {
-    if (exp_stack.is_number(token)) {
+    if (Stack::is_number(token)) {
       exp_stack.push(std::stod(token));
     } else {
       if (token.find('+') != std::string::npos) {

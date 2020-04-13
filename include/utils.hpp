@@ -13,6 +13,6 @@
 #include <string>
 
 bool checkArgs(const int &argc) noexcept;
-const std::string parseExp(Stack exp_stack, std::vector<std::string> tokens);
+std::string parseExp(Stack exp_stack, const std::vector<std::string>& tokens);
 
 #endif // CPPSTACK_UTILS_HPP
