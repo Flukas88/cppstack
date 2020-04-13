@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-project(cppstack  VERSION 0.2.1 LANGUAGES CXX)
+project(cppstack VERSION 0.2.3 LANGUAGES CXX)
 
 ### Standard
 set(CMAKE_CXX_STANDARD 11)
