@@ -23,8 +23,8 @@ install:
 script:
   - mkdir build
   - cd build && cmake ../ && make
-  - cd .. && ln -s build/ccpstack . 
-  - coverage run UnitTest.py
+  - ln -s ccpstack ../ 
+  - coverage run ../UnitTest.py
  
 after_success:
   - bash <(curl -s https://codecov.io/bash)
