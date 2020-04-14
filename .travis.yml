@@ -23,6 +23,7 @@ install:
 script:
   - mkdir build
   - cd build && cmake ../ && make
+  - cd .. && ln -s build/ccpstack . 
   - coverage run UnitTest.py
  
 after_success:
