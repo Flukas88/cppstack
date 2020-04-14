@@ -1,24 +1,19 @@
-cmake_minimum_required(VERSION 3.2)
-project(cppstack VERSION 0.2.3 LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.16)
+project(cppstack)
 
-### Standard
-#set(CMAKE_CXX_STANDARD 11)
-#
-set(CMAKE_BUILD_TYPE RelWithDebInfo)
+set(CMAKE_CXX_STANDARD 14)
 
-add_library(stacklib
-  src/stack.cpp
-  src/utils.cpp
-  include/stack.hpp
-  include/utils.hpp
-)
-
-target_compile_features(stacklib PUBLIC cxx_std_17)
-
-# include config
+include_directories(.)
 include_directories(include)
+include_directories(src)
 
-# exec config
-add_executable(cppstack main.cpp )
-target_link_libraries(cppstack PRIVATE stacklib)
-
+add_executable(cppstack
+        include/stack.hpp
+        include/utils.hpp
+        src/stack.cpp
+        src/utils.cpp
+        cppstack.cbp
+        main.cpp
+        README.md
+        requirements.txt
+        UnitTest.py)
