@@ -22,6 +22,7 @@ install:
 
 script:
   - cmake CMakeLists.txt && make
+  - cd .. && ln -s build/ccpstack . 
   - coverage run UnitTest.py
  
 after_success:
