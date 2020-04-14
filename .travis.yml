@@ -3,10 +3,10 @@ sudo: required
 matrix:
   include:
   - os: linux
-    dist: trusty
+    dist: bionic
     compiler: gcc
   - os: linux
-    dist: trusty
+    dist: bionic
     compiler: clang
   - os: osx
     osx_image: xcode11
@@ -28,3 +28,4 @@ script:
  
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+
