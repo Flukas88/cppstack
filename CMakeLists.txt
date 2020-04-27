@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 include_directories(include)
 include_directories(src)
-add_subdirectory(Google_tests)
 
 add_executable(cppstack
         include/stack.hpp
