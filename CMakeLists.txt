@@ -10,6 +10,7 @@ include_directories(src)
 add_executable(cppstack
         include/stack.hpp
         include/utils.hpp
+        include/catch.hpp
         src/stack.cpp
         src/utils.cpp
         cppstack.cbp
