@@ -13,7 +13,6 @@ add_executable(cppstack
         include/catch.hpp
         src/stack.cpp
         src/utils.cpp
-        cppstack.cbp
         main.cpp
         README.md
         requirements.txt
