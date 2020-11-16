@@ -15,7 +15,7 @@ CppCheck:
   tags:
     - cpp
   script:
-  - cppcheck . --enable=all --suppress=missingIncludeSystem --check-config -I include/
+  - cppcheck . --enable=all --suppress=missingIncludeSystem --suppress=ConfigurationNotChecked  --check-config -I include/  --std=c++14
 
 Build:
   stage: Build and Test
