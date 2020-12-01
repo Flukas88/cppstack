@@ -7,9 +7,13 @@
 //===--------------------------------------------------------------------------===//
 #include "utils.hpp"
 
-bool checkArgs(const int &argc) noexcept { return argc >= 2; }
+/// Check if n of args is correct
+bool checkArgs(const int &argc) noexcept {
+  return argc >= 2;
+}
 
-std::string parseExp(Stack exp_stack, const std::vector<std::string>& tokens) {
+/// Parse the expression
+std::string parseExp(Stack exp_stack, const std::vector<std::string> &tokens) {
   double op1, op2 = double();
   for (auto const &token : tokens) {
     if (Stack::is_number(token)) {
