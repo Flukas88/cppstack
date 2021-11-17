@@ -4,10 +4,10 @@
 
 int main(int argc, char **argv) {
   if (checkArgs(argc)) {
-    Stack the_stack;
-    std::vector<std::string> tokens = Stack::split(argv[1], ' ');
+    Stack theStack;
+    std::vector<std::string> tokens = tokenize(argv[1], ' ');
     try {
-      std::cout << "Res of " << argv[1] << " is " << parseExp(the_stack, tokens)
+      std::cout << "Res of " << argv[1] << " is " << parseExp(theStack, tokens)
                 << "\n";
     } catch (const std::invalid_argument &e) {
       std::cerr << "exception: " << e.what() << std::endl;
