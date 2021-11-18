@@ -1,19 +1,18 @@
 cmake_minimum_required(VERSION 3.12)
-project(cppstack)
+project(cppstack
+  DESCRIPTION "A Reverse Polish notation calculator in modern C++11 with python unittests"
+  VERSION "0.1"
+  LANGUAGES CXX
+  )
+
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(.)
-include_directories(include)
-include_directories(src)
+include_directories(  ${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/src)
 
-add_executable(cppstack
-        include/stack.hpp
-        include/utils.hpp
-        include/catch.hpp
-        src/stack.cpp
-        src/utils.cpp
-        main.cpp
-        README.md
-        requirements.txt
-        UnitTest.py)
+file(GLOB all_SRCS
+        "${PROJECT_SOURCE_DIR}/include/*.hpp"
+        "${PROJECT_SOURCE_DIR}/src/*.cpp"
+        )
+
+add_executable(cppstack ${all_SRCS} main.cpp)
