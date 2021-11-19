@@ -4,7 +4,7 @@
 
 ## Abstract
 
-A Reverse Polish notation calculator in *modern C++11* with python unittests
+A Reverse Polish notation calculator in *modern C++17* with python unittests
 
 
 ### How to build it
