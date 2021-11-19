@@ -1,25 +1,24 @@
 #include "utils.hpp"
+#include <sstream>
 
 /// Check if n of args is correct
 bool checkArgs(const int &argc) noexcept {
   return argc >= 2;
 }
 
-bool isNumber(const std::string &s) {
-  std::string::const_iterator it = s.begin();
-  while (it != s.end() && isdigit(*it))
-    ++it;
-  return !s.empty() && it == s.end();
+/// Check if string is a number
+bool isNumber(const std::string &str) noexcept {
+  return !str.empty() && std::find_if(str.begin(), str.end(), [](char c) { return !std::isdigit(c); }) == str.end();
 }
 
-std::vector<std::string> tokenize(const std::string &text, char sep = ' ') {
+/// Tokenize a string
+std::vector<std::string> tokenize(const std::string &str, const char &delimiter) noexcept {
   std::vector<std::string> tokens;
-  std::size_t start = 0, end;
-  while ((end = text.find(sep, start)) != std::string::npos) {
-    tokens.push_back(text.substr(start, end - start));
-    start = end + 1;
+  std::string token;
+  std::istringstream tokenStream(str);
+  while (std::getline(tokenStream, token, delimiter)) {
+    tokens.push_back(token);
   }
-  tokens.push_back(text.substr(start));
   return tokens;
 }
 
