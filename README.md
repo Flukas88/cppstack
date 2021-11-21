@@ -4,7 +4,7 @@
 
 ## Abstract
 
-A Reverse Polish notation calculator in *modern C++17* with python unittests
+A Reverse Polish notation calculator in *modern C++17* with unittests
 
 
 ### How to build it
@@ -13,6 +13,7 @@ A Reverse Polish notation calculator in *modern C++17* with python unittests
       cmake ../
       make
       cd .. && ln -s build/cppstack cppstack
+      ln -s build/cppstack_test cppstack_test
 ```
 
 ### How to use it
@@ -23,8 +24,8 @@ A Reverse Polish notation calculator in *modern C++17* with python unittests
 ### How to Unittest
 
 To manually run them (after build)
-```python
-    python UnitTest.py
+```bash
+    ./cppstack_test
 ```
 
 

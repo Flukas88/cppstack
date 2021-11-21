@@ -14,18 +14,11 @@ matrix:
   allow_failures:
   - os: osx
 
-install:
-  - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-  - sudo python get-pip.py
-  - python -m pip install --upgrade pip
-  - pip install -r requirements.txt --user
-
 script:
   - mkdir build
   - cd build && cmake ../ && make
   - ln -s ccpstack ../ 
-  - coverage run ../UnitTest.py
+  - ln -s ccpstack_test ../
+  - ./ccpstack_test
  
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
 
