@@ -9,6 +9,7 @@ A Reverse Polish notation calculator in *modern C++17* with unittests
 
 ### How to build it
 ```bash
+      git submodule init && git submodule update
       mkdir build && cd $_
       cmake ../
       make
