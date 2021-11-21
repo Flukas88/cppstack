@@ -11,7 +11,7 @@ class Stack {
 
 public:
   double pop();
-  void push(double item);
+  void push(const double item);
 private:
   std::vector<double> st;
 };
