@@ -1,5 +1,6 @@
 #include "utils.hpp"
 #include <sstream>
+#include <algorithm>
 
 /// Check if n of args is correct
 bool checkArgs(const int &argc) noexcept {
