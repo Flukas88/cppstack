@@ -10,7 +10,7 @@
 class Stack {
 
 public:
-  double pop();
+  const double pop();
   void push(const double item);
 private:
   std::vector<double> st;

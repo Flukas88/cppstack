@@ -1,7 +1,7 @@
 #include <stack.hpp>
 #include <utils.hpp>
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include <doctest.h>
 
 
 TEST_CASE("testing '5 10 x 2 /'") {
