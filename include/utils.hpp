@@ -1,13 +1,10 @@
-#ifndef CPPSTACK_UTILS_HPP
-#define CPPSTACK_UTILS_HPP
+#pragma once
 
 #include "stack.hpp"
 #include <string>
 
-bool checkArgs(const int &argc) noexcept;
-std::string parseExp(Stack expStack, const std::vector<std::string>& tokens);
-static bool isNumber(const std::string &s) noexcept;
-std::vector<std::string> tokenize(const std::string &str, const char &delimiter) noexcept ;
+auto checkArgs(const int &argc) noexcept -> bool;
+auto parseExp(Stack expStack, const std::vector<std::string>& tokens) -> std::string;
+static auto isNumber(const std::string &elem) noexcept -> bool;
+auto tokenize(const std::string &str, const char &delimiter) noexcept -> std::vector<std::string> ;
 
-
-#endif // CPPSTACK_UTILS_HPP

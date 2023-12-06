@@ -7,7 +7,7 @@ project(cppstack
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/src ${PROJECT_SOURCE_DIR}/doctest/doctest)
+include_directories(${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/src)
 
 file(GLOB all_SRCS
         "${PROJECT_SOURCE_DIR}/include/*.hpp"
@@ -15,4 +15,3 @@ file(GLOB all_SRCS
         )
 
 add_executable(cppstack ${all_SRCS} main.cpp)
-add_executable(cppstack_test ${all_SRCS} test.cpp)
