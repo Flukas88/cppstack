@@ -1,6 +1,6 @@
 #include "stack.hpp"
 
-#include <math.h>
+#include <cmath>
 
 void Stack::push(const double item) { 
   st.push_back(item); 

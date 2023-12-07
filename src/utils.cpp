@@ -1,6 +1,6 @@
 #include "utils.hpp"
 
-#include <math.h>
+#include <cmath>
 #include <sstream>
 #include <algorithm>
 
