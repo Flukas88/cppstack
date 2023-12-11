@@ -35,8 +35,21 @@ TEST_CASE("Division", "[div]") {
 
 TEST_CASE("Mixed", "[mix]") {
   Stack theStack;
-  auto tokens = tokenize("5 10 x 2 /", ' ');
+  auto tokens = tokenize("5 10 x 2 / 2 + 4 -", ' ');
   auto res = parseExp(theStack, tokens);
-  REQUIRE(res == "25.000000" );
+  REQUIRE(res == "23.000000" );
 }
 
+// test parseExp with division by 0
+TEST_CASE("Division by 0", "[div0]") {
+  Stack theStack;
+  checkArgs(2);
+  auto tokens = tokenize("5 0 /", ' ');
+  REQUIRE_THROWS_AS(parseExp(theStack, tokens), std::invalid_argument);
+}
+
+// test checkArgs
+TEST_CASE("CheckArgs", "[checkArgs]") {
+  REQUIRE(checkArgs(2) == true);
+  REQUIRE(checkArgs(1) == false);
+}
