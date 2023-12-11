@@ -8,8 +8,10 @@ A Reverse Polish notation calculator in *modern C++17* with unittests
 
 ```bash
       mkdir build 
-      cmake --build build
-      cd make
+      cmake . -Bbuild
+      cd build
+      make
+      cd ..
 ```
 
 ### How to use it
