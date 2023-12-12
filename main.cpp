@@ -2,7 +2,7 @@
 #include <utils.hpp>
 
 
-int main(int argc, char **argv) {
+auto main(int argc, char **argv) -> int {
   if (checkArgs(argc)) {
     Stack theStack;
     std::vector<std::string> tokens = tokenize(argv[1], ' ');
@@ -10,11 +10,11 @@ int main(int argc, char **argv) {
       std::cout << "Res of " << argv[1] << " is " << parseExp(theStack, tokens)
                 << "\n";
     } catch (const std::invalid_argument &e) {
-      std::cerr << "exception: " << e.what() << std::endl;
+      std::cerr << "exception: " << e.what() << '\n';
     }
   } else {
     std::cerr << "You need to specify an exp to evaluate such as '5 10 x 2 /'";
-    std::cerr << std::endl;
+    std::cerr << '\n';
   }
   return 0;
 }

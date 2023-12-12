@@ -1,6 +1,4 @@
-#ifndef CPPSTACK_STACK_HPP
-#define CPPSTACK_STACK_HPP
-
+#pragma once
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -10,10 +8,8 @@
 class Stack {
 
 public:
-  const double pop();
-  void push(const double item);
+  auto pop() -> double;
+  void push(double item);
 private:
   std::vector<double> st;
 };
-
-#endif // CPPSTACK_STACK_HPP
