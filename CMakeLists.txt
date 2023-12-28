@@ -7,6 +7,13 @@ project(cppstack
 
 set(CMAKE_CXX_STANDARD 17)
 
+include(FetchContent)
+FetchContent_Declare(
+        argparse
+        GIT_REPOSITORY https://github.com/p-ranav/argparse.git
+)
+FetchContent_MakeAvailable(argparse)
+
 include_directories(${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/src)
 
 file(GLOB all_SRCS
@@ -16,6 +23,7 @@ file(GLOB all_SRCS
 
 
 add_executable(cppstack ${all_SRCS} main.cpp)
+target_link_libraries(cppstack argparse)
 
 Include(FetchContent)
 
