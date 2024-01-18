@@ -11,5 +11,6 @@ _config.yml
 .ccls-cache/
 build/
 cmake-*/
+cmake-build-*/
 cppstack
 *.cbp

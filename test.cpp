@@ -12,14 +12,14 @@ TEST_CASE("Addition", "[add]") {
   REQUIRE(res == "17.000000" );
 }
 
-TEST_CASE("Substraction", "[sub]") {
+TEST_CASE("Subtraction", "[sub]") {
   Stack theStack;
   auto tokens = tokenize("20 14 -", ' ');
   auto res = parseExp(theStack, tokens);
   REQUIRE(res == "6.000000" );
 }
 
-TEST_CASE("Multiplicatipn", "[mult]") {
+TEST_CASE("Multiplication", "[mlt]") {
   Stack theStack;
   auto tokens = tokenize("5 6 x", ' ');
   auto res = parseExp(theStack, tokens);
