@@ -14,15 +14,16 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(argparse)
 
-include_directories(${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/src)
+include_directories(${PROJECT_SOURCE_DIR}/include)
+set(HEADER_FILES ${PROJECT_SOURCE_DIR}/include/stack.hpp ${PROJECT_SOURCE_DIR}/include/utils.hpp)
+set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/stack.cpp ${PROJECT_SOURCE_DIR}/src/utils.cpp)
 
-file(GLOB all_SRCS
-        "${PROJECT_SOURCE_DIR}/include/*.hpp"
-        "${PROJECT_SOURCE_DIR}/src/*.cpp"      
-        )
+set(ALL_SRCS
+        ${HEADER_FILES}
+        ${SOURCE_FILES}
+)
 
-
-add_executable(cppstack ${all_SRCS} main.cpp)
+add_executable(cppstack ${ALL_SRCS} main.cpp)
 target_link_libraries(cppstack argparse)
 
 Include(FetchContent)
@@ -35,5 +36,5 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(tests ${all_SRCS} test.cpp)
+add_executable(tests ${ALL_SRCS} test.cpp)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
