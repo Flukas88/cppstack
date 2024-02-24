@@ -14,3 +14,4 @@ cmake-*/
 cmake-build-*/
 cppstack
 *.cbp
+.cache/*
