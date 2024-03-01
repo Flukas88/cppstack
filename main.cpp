@@ -4,7 +4,7 @@
 
 
 auto main(int argc, char **argv) -> int {
-  argparse::ArgumentParser program("cppstack");
+  argparse::ArgumentParser program("cppstack", "0.1");
 
   program.add_argument("-e", "--expression")
     .default_value(std::string("0"))
