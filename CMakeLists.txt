@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.18)
 project(cppstack
   DESCRIPTION "A Reverse Polish notation calculator in modern C++11 with unittests"
-  VERSION "0.1"
+  VERSION "0.1.1"
   LANGUAGES CXX
   )
 
@@ -31,7 +31,7 @@ Include(FetchContent)
 FetchContent_Declare(
         Catch2
         GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-        GIT_TAG        v3.5.2 # or a later release
+        GIT_TAG        v3.5.4 # or a later release
 )
 
 FetchContent_MakeAvailable(Catch2)

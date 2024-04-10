@@ -15,7 +15,8 @@ auto isNumber(const std::string &str) noexcept -> bool {
 }
 
 /// Tokenize a string
-auto tokenize(const std::string &str, const char &delimiter) noexcept -> std::vector<std::string> {
+auto tokenize(const std::string &str,
+              const char &delimiter) noexcept -> std::vector<std::string> {
   std::vector<std::string> tokens;
   std::string token;
   std::istringstream tokenStream(str);
