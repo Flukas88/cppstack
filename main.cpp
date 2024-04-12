@@ -22,9 +22,9 @@ auto main(int argc, char **argv) -> int {
 
   try {
     auto input = program.get<std::string>("expression");
-    Stack theStack;
-    std::vector<std::string> tokens = tokenize(input, ' ');
+    const std::vector<std::string> tokens = tokenize(input, ' ');
     try {
+      const Stack theStack;
       std::cout << "Res of " << input << " is " << parseExp(theStack, tokens)
                 << "\n";
     } catch (const std::invalid_argument &e) {
