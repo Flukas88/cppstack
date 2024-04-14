@@ -14,6 +14,12 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(argparse)
 
+FetchContent_Declare(
+        glog
+        GIT_REPOSITORY https://github.com/google/glog.git
+)
+FetchContent_MakeAvailable(glog)
+
 include_directories(${PROJECT_SOURCE_DIR}/include)
 set(HEADER_FILES ${PROJECT_SOURCE_DIR}/include/stack.hpp ${PROJECT_SOURCE_DIR}/include/utils.hpp)
 set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/stack.cpp ${PROJECT_SOURCE_DIR}/src/utils.cpp)
@@ -24,7 +30,7 @@ set(ALL_SRCS
 )
 
 add_executable(cppstack ${ALL_SRCS} main.cpp)
-target_link_libraries(cppstack argparse)
+target_link_libraries(cppstack argparse glog)
 
 Include(FetchContent)
 
