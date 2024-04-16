@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.18)
 project(cppstack
-  DESCRIPTION "A Reverse Polish notation calculator in modern C++11 with unittests"
+  DESCRIPTION "A Reverse Polish notation calculator in modern C++17 with unittests"
   VERSION "0.1.1"
   LANGUAGES CXX
   )
