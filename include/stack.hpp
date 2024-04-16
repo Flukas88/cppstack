@@ -8,8 +8,8 @@
 class Stack {
 
 public:
-  auto pop() -> double;
-  void push(double item);
+  auto pop() -> float;
+  void push(float item);
 private:
-  std::vector<double> st;
+  std::vector<float> st;
 };

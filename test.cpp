@@ -35,9 +35,9 @@ TEST_CASE("Division", "[div]") {
 
 TEST_CASE("Mixed", "[mix]") {
   Stack theStack;
-  auto tokens = tokenize("5 10 x 2 / 2 + 4 -", ' ');
+  auto tokens = tokenize("5 10.5 x 2.6 / 2 + 4 -", ' ');
   auto res = parseExp(theStack, tokens);
-  REQUIRE(res == "23.000000" );
+  REQUIRE(res == "18.192308" );
 }
 
 // test parseExp with division by 0

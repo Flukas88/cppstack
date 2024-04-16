@@ -2,11 +2,11 @@
 
 #include <cmath>
 
-void Stack::push(const double item) { 
+void Stack::push(const float item) {
   st.push_back(item); 
 }
 
-auto Stack::pop() ->  double {
+auto Stack::pop() ->  float {
   double item = NAN;
   item = st.back();
   st.pop_back();
