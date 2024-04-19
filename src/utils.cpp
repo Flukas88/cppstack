@@ -34,7 +34,7 @@ auto parseExp(Stack expStack, const std::vector<std::string> &tokens) -> std::st
   for (auto const &token : tokens) {
     if (isNumber(token)) {
       // LOG(INFO) << "Pushing number " << token << '\n';
-      expStack.push(std::stod(token));
+      expStack.push(std::stof(token));
     } else {
       if (token.find('+') != std::string::npos) {
         op1 = expStack.pop();
