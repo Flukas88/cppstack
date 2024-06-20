@@ -7,7 +7,7 @@ void Stack::push(const float item) {
 }
 
 auto Stack::pop() ->  float {
-  double item = NAN;
+  float item = NAN;
   item = st.back();
   st.pop_back();
   return item;
