@@ -1,5 +1,5 @@
 # cppstack
-[![CMake on a single platform](https://github.com/Flukas88/cppstack/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/Flukas88/cppstack/actions/workflows/cmake-single-platform.yml)
+[![CMake on multiple platforms](https://github.com/Flukas88/cppstack/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/Flukas88/cppstack/actions/workflows/cmake-multi-platform.yml)
 
 ## Abstract
 
